@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+
+  database:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - '5700:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: yoteayudo
+      MYSQL_USER: yoteayudo
+      MYSQL_PASSWORD: yoteayudo
+      MYSQL_DATABASE: yoteayudo
+
+
